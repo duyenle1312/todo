@@ -3,7 +3,7 @@ import connectMongoDB from "@/lib/db";
 import Todo from "@/lib/model";
 import * as React from "react";
 
-export const revalidate = 1;
+export const revalidate = 0;
 
 const getTodo = async () => {
   await connectMongoDB();

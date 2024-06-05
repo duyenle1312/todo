@@ -2,6 +2,8 @@ import connectMongoDB from "../../../lib/db";
 import Todo from "../../../lib/model";
 import { NextResponse } from "next/server";
 
+export const revalidate = 1;
+
 export async function GET(request: Request) {
   await connectMongoDB();
   const todo = await Todo.find();
